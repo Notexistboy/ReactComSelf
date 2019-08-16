@@ -18,20 +18,31 @@ export default class fanChart extends Component {
     }
   }
   setOption = () => {
-    const { test } =this.props;
-    console.log(test)
+    this.getData()
+
     return (
       <div>
-        <ReactEcharts
+        {/* <ReactEcharts
             option={chartDatas}
             lazyUpdate={true}
             notMerge={true}
             id="rightLine"
             style={{ width: 'calc(80vw)', height: 'calc(60vh)' , marginTop: '5vh'}}
-        />
+        /> */}
       </div>
     )
   }
+  getData = () => {
+    const { annularData,title } =this.props;
+
+    /* this.setState({
+      legendData:[],
+      listData: [],
+      seriesData: [],
+      arrayData:[]
+    }) */
+  }
+
   render() {
     return (
       <div>

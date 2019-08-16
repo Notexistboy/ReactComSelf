@@ -11,11 +11,13 @@ export default class App extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      haha: 123
+      annularData: [{ name: '装备制造', value: 54},{ name: '现代材料', value: 44 },{ name: '新能源', value: 35 },
+                    { name: '新一代信息技术', value: 30 },{ name: '商贸物流', value: 20 }],
+      title:'echarts测试',
     }
   }
   render () {
-    const { haha } = this.state
+    const { annularData, title } = this.state
     return (
       <div>
         <div className="row">
@@ -28,7 +30,7 @@ export default class App extends React.Component {
         <div className="row">
           <div className="col-xs-2 col-xs-offset-2">
             <div className="list-group">
-              <AnnularChart test={haha}/>
+              <AnnularChart annularData={annularData} title={title}/>
               <BarChart />
               <FanChart />
               <CurveChart />
