@@ -5,6 +5,7 @@
  */
 import React , {Component} from 'react'
 import ReactEcharts from 'echarts-for-react';
+import echarts from "echarts";
 
 export default class fanChart extends Component {
   constructor(props) {

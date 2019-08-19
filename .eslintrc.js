@@ -326,7 +326,7 @@ module.exports = {
         //////////////
 
         // 指定数组的元素之间要以空格隔开(, 后面)， never参数：[ 之前和 ] 之后不能带空格，always参数：[ 之前和 ] 之后必须带空格
-        "array-bracket-spacing": [2, "never"],
+        "array-bracket-spacing": 0,
         // 禁止或强制在单行代码块中使用空格(禁用)
         "block-spacing": [1, "never"],
         //强制使用一致的缩进 第二个参数为 "tab" 时，会使用tab，
@@ -478,7 +478,7 @@ module.exports = {
         // 强制在 function的左括号之前使用一致的空格
         "space-before-function-paren": [0, "always"],
         // 强制在圆括号内使用一致的空格
-        "space-in-parens": [2, "never"],
+        "space-in-parens": 0,
         // 要求操作符周围有空格
         "space-infix-ops": 0,
         // 强制在一元操作符前后使用一致的空格
