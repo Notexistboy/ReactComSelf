@@ -73,7 +73,7 @@ module.exports = {
         // always-multiline：多行模式必须带逗号，单行模式不能带逗号
         "comma-dangle": 0,
         // 禁用 debugger
-        "no-debugger": 2,
+        "no-debugger": 0,
         // 禁止 function 定义中出现重名参数
         "no-dupe-args": 2,
         // 禁止对象字面量中出现重复的 key
@@ -154,7 +154,7 @@ module.exports = {
         // 使用 === 替代 == allow-null允许null和undefined==
         "eqeqeq": [2, "allow-null"],
         // 要求 for-in 循环中有一个 if 语句
-        "guard-for-in": 2,
+        "guard-for-in": 0,
         // 禁用 alert、confirm 和 prompt
         "no-alert": 0,
         // 禁用 arguments.caller 或 arguments.callee
@@ -202,7 +202,7 @@ module.exports = {
         // 禁用魔术数字(3.14什么的用常量代替)
         "no-magic-numbers": 0,
         // 禁止使用多个空格
-        "no-multi-spaces": 2,
+        "no-multi-spaces": 0,
         // 禁止使用多行字符串，在 JavaScript 中，可以在新行之前使用斜线创建多行字符串
         "no-multi-str": 2,
         // 禁止对原生对象赋值
@@ -284,7 +284,7 @@ module.exports = {
         // 禁止覆盖受限制的标识符
         "no-shadow-restricted-names": 2,
         // 禁用未声明的变量，除非它们在 /*global */ 注释中被提到
-        "no-undef": 2,
+        "no-undef": 1,
         // 禁止将变量初始化为 undefined
         "no-undef-init": 2,
         // 禁止将 undefined 作为标识符
@@ -374,7 +374,7 @@ module.exports = {
         // 强制在 JSX 属性中一致地使用双引号或单引号
         "jsx-quotes": 0,
         // 强制在关键字前后使用一致的空格 (前后腰需要)
-        "keyword-spacing": 2,
+        "keyword-spacing": 0,
         // 强制一行的最大长度
         "max-len": [1, 200],
         // 强制最大行数
@@ -431,7 +431,7 @@ module.exports = {
         // 不允许使用三元操作符
         "no-ternary": 0,
         // 禁用行尾空格
-        "no-trailing-spaces": 2,
+        "no-trailing-spaces": 0,
         // 禁止标识符中有悬空下划线_bar
         "no-underscore-dangle": 0,
         // 禁止可以在有更简单的可替代的表达式时使用三元操作符
