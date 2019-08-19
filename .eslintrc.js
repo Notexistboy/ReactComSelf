@@ -19,6 +19,7 @@ module.exports = {
         "es6": true,
         "mocha": true
     },
+    "parser": "babel-eslint",
     // JavaScript 语言选项
     "parserOptions": {
         // ECMAScript 版本
@@ -70,7 +71,7 @@ module.exports = {
         "no-control-regex": 2,
         // 数组和对象键值对最后一个逗号， never参数：不能带末尾的逗号, always参数：必须带末尾的逗号，
         // always-multiline：多行模式必须带逗号，单行模式不能带逗号
-        "comma-dangle": [1, "never"],
+        "comma-dangle": 0,
         // 禁用 debugger
         "no-debugger": 2,
         // 禁止 function 定义中出现重名参数
@@ -148,9 +149,8 @@ module.exports = {
         // 参数： allowKeywords：true 使用保留字做属性名时，只能使用.方式取属性
         // false 使用保留字做属性名时, 只能使用[]方式取属性 e.g [2, {"allowKeywords": false}]
         // allowPattern: 当属性名匹配提供的正则表达式时，允许使用[]方式取值,否则只能用.号取值 e.g [2, {"allowPattern": "^[a-z]+(_[a-z]+)+$"}]
-        "dot-notation": [2, {
-            "allowKeywords": false
-        }],
+        "dot-notation": 0,
+        "react/prop-types": 0,
         // 使用 === 替代 == allow-null允许null和undefined==
         "eqeqeq": [2, "allow-null"],
         // 要求 for-in 循环中有一个 if 语句
@@ -170,7 +170,7 @@ module.exports = {
         // 禁止使用空解构模式no-empty-pattern
         "no-empty-pattern": 2,
         // 禁止在没有类型检查操作符的情况下与 null 进行比较
-        "no-eq-null": 1,
+        "no-eq-null": 0,
         // 禁用 eval()
         "no-eval": 2,
         // 禁止扩展原生类型
@@ -200,9 +200,7 @@ module.exports = {
         // 禁止在循环中出现 function 声明和表达式
         "no-loop-func": 1,
         // 禁用魔术数字(3.14什么的用常量代替)
-        "no-magic-numbers": [1, {
-            "ignore": [0, -1, 1]
-        }],
+        "no-magic-numbers": 0,
         // 禁止使用多个空格
         "no-multi-spaces": 2,
         // 禁止使用多行字符串，在 JavaScript 中，可以在新行之前使用斜线创建多行字符串
@@ -292,10 +290,11 @@ module.exports = {
         // 禁止将 undefined 作为标识符
         "no-undefined": 0,
         // 禁止出现未使用过的变量
-        "no-unused-vars": [2, {
+        "no-unused-vars": 0, /* [2, {
             "vars": "all",
             "args": "none"
-        }],
+        }], */
+        //"no-unused-var": 0,
         // 不允许在变量定义之前使用它们
         "no-use-before-define": 0,
 
@@ -338,10 +337,7 @@ module.exports = {
         // 双峰驼命名格式
         "camelcase": 2,
         // 控制逗号前后的空格
-        "comma-spacing": [2, {
-            "before": false,
-            "after": true
-        }],
+        "comma-spacing": 0,
         // 控制逗号在行尾出现还是在行首出现 (默认行尾)
         // http://eslint.org/docs/rules/comma-style
         "comma-style": [2, "last"],
@@ -354,21 +350,14 @@ module.exports = {
         // 强制使用命名的 function 表达式
         "func-names": 0,
         // 文件末尾强制换行
-        "eol-last": 2,
-        "indent": [2, 4, {
-            "SwitchCase": 1
-        }],
+        "eol-last": 0,
+        "indent": 0,
         // 强制在对象字面量的属性中键和值之间使用一致的间距
-        "key-spacing": [2, {
-            "beforeColon": false,
-            "afterColon": true
-        }],
+        "key-spacing": 0,
         // 强制使用一致的换行风格
-        "linebreak-style": [1, "unix"],
+        "linebreak-style": [0, "unix"],
         // 要求在注释周围有空行 ( 要求在块级注释之前有一空行)
-        "lines-around-comment": [1, {
-            "beforeBlockComment": true
-        }],
+        "lines-around-comment": 0,
         // 强制一致地使用函数声明或函数表达式，方法定义风格，参数：
         // declaration: 强制使用方法声明的方式，function f(){} e.g [2, "declaration"]
         // expression：强制使用方法表达式的方式，var f = function() {} e.g [2, "expression"]
@@ -475,32 +464,30 @@ module.exports = {
         // 要求对象字面量属性名称用引号括起来
         "quote-props": 0,
         // 强制使用一致的反勾号、双引号或单引号
-        "quotes": [2, "double", "avoid-escape"],
+        "quotes": 0,
         // 要求使用 JSDoc 注释
-        "require-jsdoc": 1,
+        "require-jsdoc": 0,
         // 要求或禁止使用分号而不是 ASI（这个才是控制行尾部分号的，）
-        "semi": [2, "always"],
+        "semi": 0,
         // 强制分号之前和之后使用一致的空格
         "semi-spacing": 0,
         // 要求同一个声明块中的变量按顺序排列
         "sort-vars": 0,
         // 强制在块之前使用一致的空格
-        "space-before-blocks": [2, "always"],
+        "space-before-blocks": 0,
         // 强制在 function的左括号之前使用一致的空格
         "space-before-function-paren": [0, "always"],
         // 强制在圆括号内使用一致的空格
         "space-in-parens": [2, "never"],
         // 要求操作符周围有空格
-        "space-infix-ops": 2,
+        "space-infix-ops": 0,
         // 强制在一元操作符前后使用一致的空格
         "space-unary-ops": [2, {
             "words": true,
             "nonwords": false
         }],
         // 强制在注释中 // 或 /* 使用一致的空格
-        "spaced-comment": [2, "always", {
-            "markers": ["global", "globals", "eslint", "eslint-disable", "*package", "!"]
-        }],
+        "spaced-comment": 0,
         // 要求或禁止 Unicode BOM
         "unicode-bom": 0,
         // 要求正则表达式被括号括起来
@@ -513,7 +500,7 @@ module.exports = {
         // 要求箭头函数体使用大括号
         "arrow-body-style": 2,
         // 要求箭头函数的参数使用圆括号
-        "arrow-parens": 2,
+        "arrow-parens": 0,
         "arrow-spacing": [2, {
             "before": true,
             "after": true

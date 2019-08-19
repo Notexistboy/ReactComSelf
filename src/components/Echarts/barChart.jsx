@@ -16,7 +16,7 @@ export default class barChart extends Component {
   }
   setOption = () => {
     this.getData()
-    //var chartDatas = { }
+    var chartDatas = { }
     return (
       <div>
         {/* <ReactEcharts

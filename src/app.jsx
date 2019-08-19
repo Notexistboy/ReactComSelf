@@ -13,11 +13,16 @@ export default class App extends React.Component {
     this.state = {
       annularData: [{ name: '装备制造', value: 54},{ name: '现代材料', value: 44 },{ name: '新能源', value: 35 },
                     { name: '新一代信息技术', value: 30 },{ name: '商贸物流', value: 20 }],
-      title:'echarts测试',
+      title: 'echarts测试',
+      barChart: [],
+      fanChart: [],
+      curveChart: [],
+      pieChart: [],
+
     }
   }
   render () {
-    const { annularData, title } = this.state
+    const { annularData, title, barChart, fanChart, curveChart, pieChart } = this.state
     return (
       <div>
         <div className="row">
@@ -31,10 +36,10 @@ export default class App extends React.Component {
           <div className="col-xs-2 col-xs-offset-2">
             <div className="list-group">
               <AnnularChart annularData={annularData} title={title}/>
-              <BarChart />
-              <FanChart />
-              <CurveChart />
-              <PieChart />
+              <BarChart barChart={barChart} />
+              <FanChart fanChart={fanChart} />
+              <CurveChart curveChart={curveChart} />
+              <PieChart pieChart={pieChart} />
               {/*导航路由链接*/}
               {/* <MyNavLink className="list-group-item" to='/about' >About</MyNavLink>
               <MyNavLink className="list-group-item" to='/admin'>Admin</MyNavLink>
