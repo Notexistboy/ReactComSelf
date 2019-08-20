@@ -34,13 +34,6 @@ export default class App extends React.Component {
     return (
       <div>
         <div className="row">
-          <div className="col-xs-offset-2 col-xs-8">
-            <div className="page-header">
-              <h2>React Router Demo</h2>
-            </div>
-          </div>
-        </div>
-        <div className="row">
           <div className="col-xs-2 col-xs-offset-2">
             <div className="list-group">
               <AnnularChart annularData={annularData} title={title} />

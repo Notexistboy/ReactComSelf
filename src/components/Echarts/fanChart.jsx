@@ -16,19 +16,19 @@ export default class fanChart extends Component {
 
     }
   }
-  /* setOption = () => {
-    //this.getData()
+  setOption = () => {
+    this.getData()
     //var chartDatas = { }
 
   }
   getData = () => {
-
-  } */
+    const { fanChart } = this.props
+  }
 
   render() {
     return (
       <div>
-        {/* this.setOption() */}
+        
       </div>
     )
   }

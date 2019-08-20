@@ -16,7 +16,8 @@ export default class barChart extends Component {
       yAxisData: [],
       seriesData: [],
       seriesDataShadow: [],
-      values:[],
+      myChartoption: {},
+      myShadowoption: {},
     }
     this.getData = this.getData.bind(this)
     this.setOption = this.setOption.bind(this)
@@ -95,11 +96,13 @@ export default class barChart extends Component {
       },
       series: seriesDataShadow
     }
+    debugger
     this.setState({
       myChartoption,
       myShadowoption
     })
   }
+
   getData = () => {
     const { barChart, descript, legend, } = this.props
     const { legendData, xAxisDatas, yAxisData, seriesData, seriesDataShadow, } = this.state
@@ -110,26 +113,21 @@ export default class barChart extends Component {
     let offset = 0
     let yMaxArr = []
     let yMinArr = []
-    let yMax
-    let yMin
-    let itemLength
+    let yMax, yMin, itemLength
     for(let key in barChart){
       legendData.push(key);   
       values.push(barChart[key])//取得value
       for(let item in barChart[key]){
         xAxisDatas.push(item)
       }
+      debugger
     }
-    
     values.map((item,index) => {
       debugger
       obj["data_"+index]=[]
       for(let it in values[index]){
         obj["data_"+index].push(values[index][it])
       }
-      //obj["data_"+index].length
-      //ymax = obj["data_"+index].Math(...obj["data_"+index])
-      //Ymax 值可能不同 单位不同 无法公用一个
       yMaxArr.push(Math.max.apply(null, obj["data_"+index]))
       yMinArr.push(Math.min.apply(null, obj["data_"+index]))
       yMax = Math.max.apply(null, yMaxArr)
@@ -235,8 +233,8 @@ export default class barChart extends Component {
   render() {
     const { myChartoption, myShadowoption } = this.state
     return (
-      <div>
-        <div style={{width:'500px', height:'500px', zIndex:1}}>
+      <div  style={{width:'500px', height:'500px', position:'relative', display:'block'}}>
+        <div style={{width:'500px', height:'500px', position:'absolute', top:0, left:0, zIndex:1}}>
           <ReactEcharts
               option={myChartoption}
               lazyUpdate={true}
@@ -252,7 +250,6 @@ export default class barChart extends Component {
               notMerge={true}
               id="rightLine"
               style={{ width: 'calc(80vw)', height: 'calc(60vh)' , marginTop: '5vh'}}
-              
           />
         </div>
       </div>
