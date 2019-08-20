@@ -157,7 +157,7 @@ export default class curveChart extends Component {
       })
     }else{
       seriesData.forEach((item,index) => {
-        debugger
+        
         item['yAxisIndex']  = index //多Y轴情况下显示右侧y轴刻度
       })
     }

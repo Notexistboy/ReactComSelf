@@ -27,10 +27,10 @@ export default class fanChart extends Component {
   }
   setOption = () => {
     this.getData()
-    debugger
+    
     const { title } =this.props;
     const { legendData, listData } = this.state;
-    debugger
+    
     const option = {
       title: {
         text: title,
@@ -86,7 +86,7 @@ export default class fanChart extends Component {
         }
       ]
     }
-    debugger
+    
     this.setState({
       option
     })
@@ -106,7 +106,7 @@ export default class fanChart extends Component {
     const { annularData } =this.props;
     const { legendData, listData } = this.state;
     const arrayData = [];
-    debugger
+    
     for (var key in annularData){
       legendData.push(key)
       arrayData.push(annularData[key])

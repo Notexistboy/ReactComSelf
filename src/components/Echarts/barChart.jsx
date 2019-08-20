@@ -96,7 +96,7 @@ export default class barChart extends Component {
       },
       series: seriesDataShadow
     }
-    debugger
+    
     this.setState({
       myChartoption,
       myShadowoption
@@ -120,10 +120,10 @@ export default class barChart extends Component {
       for(let item in barChart[key]){
         xAxisDatas.push(item)
       }
-      debugger
+      
     }
     values.map((item,index) => {
-      debugger
+      
       obj["data_"+index]=[]
       for(let it in values[index]){
         obj["data_"+index].push(values[index][it])
@@ -133,7 +133,7 @@ export default class barChart extends Component {
       yMax = Math.max.apply(null, yMaxArr)
       yMin = Math.min.apply(null, yMaxArr)
       itemLength = obj["data_"+index].length
-      debugger
+      
       if(!descript){
         if(index===2){
           offset = 25;
@@ -157,7 +157,7 @@ export default class barChart extends Component {
           offset:offset
         })
       }
-      debugger
+      
       seriesData.push({
         name: legendData[index],
         type: "bar",
@@ -194,7 +194,7 @@ export default class barChart extends Component {
       })
     }else{
       seriesData.forEach((item,index) => {
-        debugger
+        
         item['yAxisIndex']  = index
       })
     }
@@ -207,7 +207,7 @@ export default class barChart extends Component {
           dataShadow.push(yMax)
         }
       }
-      debugger
+      
       seriesDataShadow.push({
         // For shadow
         type: "bar",

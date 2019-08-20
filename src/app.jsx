@@ -36,11 +36,11 @@ export default class App extends React.Component {
         <div className="row">
           <div className="col-xs-2 col-xs-offset-2">
             <div className="list-group">
-              <AnnularChart annularData={annularData} title={title} />
-              <BarChart barChart={barChart} descript={descript} title={title} legend={legend} />
+              {/* <AnnularChart annularData={annularData} title={title} />
+              <BarChart barChart={barChart} descript={descript} title={title} legend={legend} /> */}
               <FanChart fanChart={fanChart} title={title} />
-              <CurveChart curveChart={curveChart} descript={descript} title={title} legend={legend} />
-              <PieChart pieChart={pieChart} title={title} />
+              {/* <CurveChart curveChart={curveChart} descript={descript} title={title} legend={legend} />
+              <PieChart pieChart={pieChart} title={title} /> */}
               {/*导航路由链接*/}
               {/* <MyNavLink className="list-group-item" to='/about' >About</MyNavLink>
               <MyNavLink className="list-group-item" to='/admin'>Admin</MyNavLink>
